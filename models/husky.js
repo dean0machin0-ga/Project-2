@@ -1,29 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const huskySchema = new Schema({
-    Schedule: [String],
-    record: Number,
-    yearRecord: Number,
-}, {
-    timestamps: true
-})
-
-const scoreSchema = new Schema({
+const gameSchema = new Schema({
+    win: Number,
+    loss: Number,
     finalScore: Number,
-    quarterlyScore: Number,
+    quarterlyScore: [Number]
 }, {
     timestamps: true
 })
 
-const standingsSchema = new Schema({
-    pac12Standings: Number,
-    apTop25: Number,
-    cfpTop25: Number
-}, {
-    timestamps: true
-})
-
-module.exports = mongoose.model('huskys', huskySchema)
-module.exports = mongoose.model('huskys', scoreSchema)
-module.exports = mongoose.model('huskys', standingsSchema)
+module.exports = mongoose.model('Game', gameSchema)
