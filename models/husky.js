@@ -2,9 +2,9 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const huskySchema = new Schema({
-    Schedule: String,
+    Schedule: [String],
     record: Number,
-    pastRecord: Number,
+    yearRecord: Number,
 }, {
     timestamps: true
 })
