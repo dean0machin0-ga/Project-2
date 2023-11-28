@@ -11,10 +11,10 @@ async function create(req, res) {
             delete req.body[key]
         }
         try {
-            await Husky.create(req.body)
+            await Game.create(req.body)
             res.redirect("/games/")
-            const newMovie = await Husky.create(req.body)
-            console.log(newMovie)
+            const newGame = await Game.create(req.body)
+            console.log(newGame)
             res.redirect(`/gamess/${currentGame._id}`)
         }   catch (err) {
             console.log(err)

@@ -1,6 +1,11 @@
 <%- include('../partials/header') %>
 <body>
-    <form action="/huskys" method="POST">
+    <form action="/games" method="POST">
+        <label>Game Date
+            <input type="date" name="game date" required>
+        </label><br>
+        <label>Opponent
+            <input type="string" name="opponent" required>
         </label><br>
         <label>Wins
             <input type="number" name="wins" required>
