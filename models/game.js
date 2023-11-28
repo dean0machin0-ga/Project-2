@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const gameSchema = new Schema({
     gameDate: Date,
     opponent: String,
+    starters: [String],
     win: Number,
     loss: Number,
     finalScore: Number,

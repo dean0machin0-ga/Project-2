@@ -6,19 +6,19 @@ module.exports = {
 
 async function create(req, res) {
     req.body.currentGame = !!req.body.currentGame
+    req.body.starters = req.body.starters.trim()
+    if (req.body.starters) req.body.starters = req.body.starters.split(/\s*,\s*/)
+
     for(let key in req.body) {
-        if(req.body[key] === "") {
+        if(req.body[key] === "") 
             delete req.body[key]
         }
+
         try {
             await Game.create(req.body)
             res.redirect("/games/")
-            const newGame = await Game.create(req.body)
-            console.log(newGame)
-            res.redirect(`/gamess/${currentGame._id}`)
         }   catch (err) {
             console.log(err)
-            res.render("gamess/new", { errorMsg: err.message })
+            res.render("games/new", { errorMsg: err.message })
         }
     }
-}
