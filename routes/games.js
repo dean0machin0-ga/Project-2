@@ -7,6 +7,8 @@ const gamesCtrl = require('../controllers/games')
   // res.send('respond with a comment')
 // });
 
+router.get('/new', gamesCtrl.new)
+
 router.get('/', gamesCtrl.create)
 
 module.exports = router

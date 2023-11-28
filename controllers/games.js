@@ -1,7 +1,12 @@
 const Game = require('../models/game')
 
 module.exports = {
+    new: newGame,
     create,
+}
+
+function newGame(req, res) {
+    res.render("games/new", { title: "Add Game", errorMsg:"" })
 }
 
 async function create(req, res) {

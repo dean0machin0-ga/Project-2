@@ -1,0 +1,59 @@
+<%- include('../partials/header') %>
+<body>
+    <form action="/games" method="POST">
+        <label>Game Date
+            <input type="date" name="game date" required>
+        </label><br>
+        <label>Home Team
+            <select name="home team">
+                <option value="Washington Huskys">Washington Huskys</option>
+                <option value="Boise St Broncos">Boise St Broncos</option>
+                <option value="Tulsa Golden Hurricanes">Tulsa Golden Hurricanes</option>
+                <option value="Michigan St Spartans">Michigan St Spartans</option>
+                <option value="Cal Golden Bears">Cal Golden Bears</option>
+                <option value="Arizona Wildcats">Arizona Wildcats</option>
+                <option value="Oregon Ducks">Oregon Ducks</option>
+                <option value="Arizona St Sun Devils">Arizona St Sun Devils</option>
+                <option value="Stanford Cardinal">Stanford Cardinal</option>
+                <option value="USC Trojans">USC Trojans</option>
+                <option value="Utah Utes">Utah Utes</option>
+                <option value="Oregon St Beavers">Oregon St Beavers</option>
+                <option value="Washington St Cougars">Washington St Cougars</option>
+            </select>
+        </label><br>
+        <label>Visiting Team
+            <select name="visiting team">
+                <option value="Washington Huskys">Washington Huskys</option>
+                <option value="Boise St Broncos">Boise St Broncos</option>
+                <option value="Tulsa Golden Hurricanes">Tulsa Golden Hurricanes</option>
+                <option value="Michigan St Spartans">Michigan St Spartans</option>
+                <option value="Cal Golden Bears">Cal Golden Bears</option>
+                <option value="Arizona Wildcats">Arizona Wildcats</option>
+                <option value="Oregon Ducks">Oregon Ducks</option>
+                <option value="Arizona St Sun Devils">Arizona St Sun Devils</option>
+                <option value="Stanford Cardinal">Stanford Cardinal</option>
+                <option value="USC Trojans">USC Trojans</option>
+                <option value="Utah Utes">Utah Utes</option>
+                <option value="Oregon St Beavers">Oregon St Beavers</option>
+                <option value="Washington St Cougars">Washington St Cougars</option>
+            </select>
+        </label><br>
+        <label>Huskys Starters (separate players with commas)
+            <input type="text" name="huskys starters">
+        </label><br>
+        <label>Oppenents Starters (separate players with commas)
+            <input type="text" name="oppenents starters">
+        </label><br>
+        <label>Win_Loss
+            <input type="checkbox" name="win_loss" required>
+        </label><br>
+        <label>Final Score
+            <input type="number" name="final score" required>
+        </label><br>
+        <label>UW Qtrly Score
+            <input type="number" name="uw qtrly score" required>
+        </label><br>
+        <button type="submit">Add Game</button>
+    </form>
+</body>
+</html>
