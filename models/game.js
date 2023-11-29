@@ -37,10 +37,10 @@ const gameSchema = new Schema({
 
     huskysStarters: [String],
     oppenentsStarters: [String],
-    win_loss: { type: Boolean, default: true },
-    finalScore: { type: [Number] },
-    huskysQtrScore: [Number],
-    oppQtrScore: [Number]
+    huskysWin: { type: Boolean, default: true },
+    finalScore: [String],
+    huskysQtrlyScore: [String],
+    oppenentsQtrlyScore: [String]
     }, 
     {
     timestamps: true

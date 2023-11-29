@@ -9,6 +9,8 @@ const gamesCtrl = require('../controllers/games')
 
 router.get('/new', gamesCtrl.new)
 
-router.get('/', gamesCtrl.create)
+router.get('/', gamesCtrl.index)
+
+router.post('/', gamesCtrl.create)
 
 module.exports = router
