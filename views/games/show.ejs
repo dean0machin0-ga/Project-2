@@ -1,0 +1,21 @@
+<%- include('../partials/header') %>
+<section id="show-page">
+    <div>Game Date:</div>
+    <div><%= game.gameDate %></div>
+    <div>Home Team:</div>
+    <div><%= game.homeTeam %></div>
+    <div>Visiting Team:</div>
+    <div><%= game.visitingTeam %></div>
+    <div>Huskys Starters:</div>
+    <div><%= game.huskysStarters %></div>
+    <div>Oppenents Starters:</div>
+    <div><%= game.oppenentsStarters %></div>
+    <div>Final Score:</div>
+    <div><%= game.finalScore %></div>
+    <div>Huskys Score by Quarter:</div>
+    <div><%= game.huskysQtrlyScore %></div>
+    <div>Oppenents Score by Quarter:</div>
+    <div><%= game.oppenentsQtrlyScore %></div>
+    <div>Huskys Win:</div>
+    <div><%= game.huskysWin ? 'Heck yah!! Go DAWGS!!' : 'No.. Sad' %></div>
+</section>

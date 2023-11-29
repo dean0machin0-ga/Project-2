@@ -3,16 +3,18 @@
 <table id="schedule">
     <thead>
         <tr>
-            <th>Oppenent</th>
+            <th>Home Team</th>
+            <th>Visiting Team</th>
             <th>Game Date</th>
         </tr>
     </thead>
     <tbody>
         <% games.forEach(g => { %>
             <tr>
-                <td><%= g.oppenent %></td>
-                <td><%= g.gameDate %></td>
-                <td><a href="/games/<%= g._id %>">DETAILS</a></td>
+                <td><%= g.homeTeam %></td><br>
+                <td><%= g.visitingTeam %></td>
+                <td><%= g.gameDate %></td><br>
+                <td><a href="/games/<%= g._id %>">RESULTS</a></td>
             </tr>
         <% }) %>
     </tbody>

@@ -3,7 +3,8 @@ const Game = require('../models/game')
 module.exports = {
     new: newGame,
     create,
-    index
+    index,
+    show
 }
 
 function newGame(req, res) {
@@ -44,4 +45,15 @@ async function index(req, res) {
     const games = await Game.find({})
     console.log(games)
     res.render('games/index', { title: "Add Game", games })
+}
+
+async function show(req, res) {
+    try {
+        const game = await Game.findById(req.params.id)
+        console.log(game)
+        res.render('games/show', { title: 'Game Results', game})
+    }   catch(err) {
+        console.log(err)
+        res.redirect('/games')
+    }
 }
