@@ -53,6 +53,7 @@
                 <th>Date</th>
                 <th>Comment</th>
                 <th>Game rating</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -68,5 +69,13 @@
 <% } else { %>
     <h5>No Comments Yet</h5>
 <% } %>
+<td><%= c.comment %></td>
+<td>
+    <% if (user?._id.equals(c.user)) { %>
+        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST"
+            <button type="submit">DELETE</button>
+        </form>
+    <% } %>
+</td>
 </section>
 <%- include('../partials/footer') %>
