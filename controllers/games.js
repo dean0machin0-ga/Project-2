@@ -19,7 +19,6 @@ async function create(req, res) {
     req.body.finalScore = req.body.finalScore.split(',')
     req.body.huskysQtrlyScore = req.body.huskysQtrlyScore.split(',')
     req.body.oppenentsQtrlyScore = req.body.oppenentsQtrlyScore.split(',')
-    // if (req.body.starters) req.body.starters = req.body.starters.split(/\s*,\s*/)
 
     if(req.body.huskysWin === 'on') {
         req.body.huskysWin = true

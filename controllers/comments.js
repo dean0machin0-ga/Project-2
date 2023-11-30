@@ -7,6 +7,7 @@ module.exports = {
 async function create(req, res) {
     const game = await Game.findById(req.params.id)
     game.comments.push(req.body)
+    console.log(req.body)
 
     try {
         await game.save()
