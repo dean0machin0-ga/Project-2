@@ -1,7 +1,8 @@
 const Game = require('../models/game')
 
 module.exports = {
-    create
+    create,
+    delete: deleteComment
 }
 
 async function create(req, res) {
@@ -15,5 +16,13 @@ async function create(req, res) {
     } catch(err) {
         console.log(err)
     }
+    res.redirect(`/games/${game._id}`)
+}
+
+async function deleteComment(req, res) {
+    const game = await Game.findOne({ 'comments._id': req.params.id })
+    if (!game) return res.redirect('/games')
+    game.comments.remove(req.params.id)
+    await game.save()
     res.redirect(`/games/${game._id}`)
 }

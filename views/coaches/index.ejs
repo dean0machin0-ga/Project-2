@@ -1,3 +1,25 @@
 <%- include('../partials/header') %>
+<h2>College Football Coaches</h2>
+<table id="coaches">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Experience</th>
+            <th>Employed</th>
+            <th>Current Team</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% coaches.forEach(c => { %>
+            <tr>
+                <td><%= c.name %></td><br>
+                <td><%= c.experience %></td>
+                <td><%= c.employed %></td><br>
+                <td><%= c.currentTeam %></td><br>
+                <td><a href="/coaches/<%= g._id %>">DETAILS</a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
 
 <%- include('../partials/footer') %>
