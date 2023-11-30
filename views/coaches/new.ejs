@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+    <form action="/coaches" method="POST">
+        <label>Name:
+            <input type="text" name="name" required>
+        </label><br>
+        <label>Coaching Experience:
+            <input type="number" name="experience">
+        </label>
+        <label>Employed:
+            <input type="checkbox" name="employed">
+        </label>
+        <label>Current Team:
+            <input type="text" name="currentTeam" required>
+        </label>
+        <button type="submit">Add Coach</button>
+    </form>
+    <p><%= errorMsg %></p>
+<%- include('../partials/footer') %>
