@@ -3,6 +3,7 @@ const Coach = require('../models/coach')
 module.exports = {
     new: newCoach,
     create,
+    index,
 }
 
 function newCoach(req, res) {
@@ -23,7 +24,7 @@ async function create(req, res) {
         if(req.body[key] === "") 
             delete req.body[key]
     }
-    
+
     try {
         await Coach.create(req.body)
         res.redirect('/coaches')
@@ -31,4 +32,10 @@ async function create(req, res) {
         console.log(err)
         res.render('coaches/new', { errorMsg: err.message })
     }
+}
+
+async function index(req, res) {
+    const coaches = await Coach.find({})
+    console.log(coaches)
+    res.render('coaches/index', { title: "Add Coach", coaches })
 }

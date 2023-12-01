@@ -1,3 +1,13 @@
 <%- include('../partials/header') %>
+<section id="show-page">
+    <div>Name:</div>
+    <div><%= coach.name %></div>
+    <div>Current Team:</div>
+    <div><%= coach.currentTeam %></div>
+    <div>Experience:</div>
+    <div><%= coach.experience %></div>
+    <div>Currently Employed:</div>
+    <div><%= coach.employed ? 'Yes!' : 'No' %></div>
+</section>
 
 <%- include('../partials/footer') %>
