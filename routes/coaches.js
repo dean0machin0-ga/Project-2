@@ -4,7 +4,7 @@ const coachesCtrl = require('../controllers/coaches')
 
 router.get('/new', coachesCtrl.new)
 
-// router.get('/:id', coachesCtrl.show)
+router.get('/:id', coachesCtrl.show)
 
 router.get('/', coachesCtrl.index)
 

@@ -4,6 +4,7 @@ module.exports = {
     new: newCoach,
     create,
     index,
+    show
 }
 
 function newCoach(req, res) {
@@ -38,4 +39,15 @@ async function index(req, res) {
     const coaches = await Coach.find({})
     console.log(coaches)
     res.render('coaches/index', { title: "Add Coach", coaches })
+}
+
+async function show(req, res) {
+    try {
+        const coach = await Coach.findById(req.params.id)
+        console.log(coach)
+        res.render('coaches/show', { title: 'Coach Stats', coach })
+    }   catch(err) {
+        console.log(err)
+        res.redirect('/coaches')
+    }
 }
