@@ -57,7 +57,9 @@
             </tr>
         </thead>
         <tbody>
+            <% let total = 0 %>
             <% game.comments.forEach(function(c) { %>
+                <% total += c.comment %>
                 <tr>
                     <td><%= c.createdAt.toLocaleDateString() %></td>
                     <td><%= c.content %></td>
@@ -70,6 +72,10 @@
                     </td>
                 </tr>
             <% }) %>
+            <tr>
+                <td colspan="2"></td>
+                <td><strong><%= (total/ game.comments.length).toFixed(1) %></strong></td>
+            </tr>
         </tbody>
     </table>
 <% } else { %>

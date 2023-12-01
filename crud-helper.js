@@ -23,12 +23,12 @@ require('dotenv').config();
 require('./config/database');
 
 // Require the app's Mongoose models
-const Movie = require('./models/movie');
-const Performer = require('./models/performer');
+const Game = require('./models/game');
+const Coach = require('./models/coach');
 
 // Example CRUD
 
 // Top-level await (using await outside of an async function)
 // has been available since Node v14.8
-let movies = await Movie.find({});
-console.log(movies);
+let games = await Game.find({});
+console.log(games);

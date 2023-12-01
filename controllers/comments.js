@@ -20,9 +20,9 @@ async function create(req, res) {
 }
 
 async function deleteComment(req, res) {
-    const game = await Game.findOne({ 'comments._id': req.params.id })
+    const game = await Game.findById(req.params.id)
     if (!game) return res.redirect('/games')
-    game.comments.remove(req.params.commentid)
+    game.comments.remove({_id:req.params.commentid})
     await game.save()
     res.redirect(`/games/${game._id}`)
 }
