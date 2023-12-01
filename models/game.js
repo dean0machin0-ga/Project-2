@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const commentSchema = new Schema({
     content: { type: String, required: true },
     gameRating: { type: Number, min: 0, max: 10, default: 5 },
+
 },
 { timestamps: true }
 )
@@ -52,7 +53,11 @@ const gameSchema = new Schema({
     finalScore: [String],
     huskysQtrlyScore: [String],
     oppenentsQtrlyScore: [String],
-    comments: [commentSchema]
+    comments: [commentSchema],
+    coach: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Coach'
+    }],
     }, {
     timestamps: true
     })

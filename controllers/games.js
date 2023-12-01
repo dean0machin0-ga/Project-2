@@ -32,8 +32,8 @@ async function create(req, res) {
         }
 
         try {
-            await Game.create(req.body)
-            res.redirect("/games/")
+            const game = await Game.create(req.body)
+            res.redirect(`/games/${game._id}`)
         }   catch (err) {
             console.log(err)
             res.render("games/new", { errorMsg: err.message })
@@ -48,7 +48,7 @@ async function index(req, res) {
 
 async function show(req, res) {
     try {
-        const game = await Game.findById(req.params.id)
+        const game = await Game.findById(req.params.id).populate('coach')
         console.log(game)
         res.render('games/show', { title: 'Game Results', game})
     }   catch(err) {
