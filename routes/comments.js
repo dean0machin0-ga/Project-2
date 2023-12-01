@@ -4,6 +4,6 @@ const commentsCtrl = require('../controllers/comments')
 
 router.post('/games/:id/comments', commentsCtrl.create)
 
-router.post('/games/:id/comments', commentsCtrl.delete)
+router.delete('/games/:id/comments/:commentid', commentsCtrl.delete)
 
 module.exports = router

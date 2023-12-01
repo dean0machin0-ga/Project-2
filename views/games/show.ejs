@@ -62,6 +62,12 @@
                     <td><%= c.createdAt.toLocaleDateString() %></td>
                     <td><%= c.content %></td>
                     <td><%= c.gameRating %></td>
+                    <td><%= c.comment %></td>
+                    <td>
+                        <form action="/games/<%= game._id %>/comments/<%= c._id %>?_method=DELETE" method="POST">
+                            <button type="submit">DELETE</button>
+                        </form>
+                    </td>
                 </tr>
             <% }) %>
         </tbody>
@@ -69,13 +75,5 @@
 <% } else { %>
     <h5>No Comments Yet</h5>
 <% } %>
-<td><%= c.comment %></td>
-<td>
-    <% if (user?._id.equals(c.user)) { %>
-        <form action="/comments/<%= c._id %>?_method=DELETE" method="POST"
-            <button type="submit">DELETE</button>
-        </form>
-    <% } %>
-</td>
 </section>
 <%- include('../partials/footer') %>
