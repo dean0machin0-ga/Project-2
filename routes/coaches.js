@@ -4,4 +4,6 @@ const coachesCtrl = require('../controllers/coaches')
 
 router.get('/new', coachesCtrl.new)
 
+router.post('/', coachesCtrl.create)
+
 module.exports = router
