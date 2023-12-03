@@ -48,9 +48,9 @@ async function index(req, res) {
 
 async function show(req, res) {
     try {
-        const game = await Game.findById(req.params.id).populate('coach')
+        const game = await Game.findById(req.params.id)
         console.log(game)
-        res.render('games/show', { title: 'Game Results', game})
+        res.render('games/show', { title: 'Game Results', game })
     }   catch(err) {
         console.log(err)
         res.redirect('/games')

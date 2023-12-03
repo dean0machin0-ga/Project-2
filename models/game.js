@@ -54,10 +54,6 @@ const gameSchema = new Schema({
     huskysQtrlyScore: [String],
     oppenentsQtrlyScore: [String],
     comments: [commentSchema],
-    coach: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Coach'
-    }],
     }, {
     timestamps: true
     })
