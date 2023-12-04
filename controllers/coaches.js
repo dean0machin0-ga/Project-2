@@ -1,10 +1,12 @@
 const Coach = require('../models/coach')
+const Game = require('../models/game')
 
 module.exports = {
     new: newCoach,
     create,
     index,
-    show
+    show,
+    addToGame
 }
 
 function newCoach(req, res) {
@@ -50,4 +52,11 @@ async function show(req, res) {
         console.log(err)
         res.redirect('/coaches')
     }
+}
+
+async function addToGame(req, res) {
+    const game = await Game.findById(req.params.id)
+    game.coach.push(req.body.coachId)
+    await game.save()
+    res.redirect(`/games/${game._id}`)
 }

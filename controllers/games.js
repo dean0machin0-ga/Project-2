@@ -1,4 +1,5 @@
 const Game = require('../models/game')
+const Coach = require('../models/coach')
 
 module.exports = {
     new: newGame,
@@ -48,9 +49,10 @@ async function index(req, res) {
 
 async function show(req, res) {
     try {
-        const game = await Game.findById(req.params.id)
-        console.log(game)
-        res.render('games/show', { title: 'Game Results', game })
+        const game = await Game.findById(req.params.id).populate('coach')
+        const coaches = await Coachh.find({ _id: { $nin: game.coach } }).sort('name')
+        console.log(coaches)
+        res.render('games/show', { title: 'Game Results', game, coaches })
     }   catch(err) {
         console.log(err)
         res.redirect('/games')

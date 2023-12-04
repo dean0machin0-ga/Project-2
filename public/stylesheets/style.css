@@ -130,3 +130,13 @@ table td {
 #show-page div:nth-child(even) {
   font-weight: bold;
 }
+
+#show-page ul {
+  margin: 0 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+	
+#show-page li {
+  font-weight: bold;
+}

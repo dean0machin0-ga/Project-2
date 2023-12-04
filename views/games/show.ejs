@@ -18,6 +18,12 @@
     <div><%= game.oppenentsQtrlyScore %></div>
     <div>Huskys Win:</div>
     <div><%= game.huskysWin ? 'Heck yah!! Go DAWGS!!' : 'No.. Sad' %></div>
+    <div>Coach:</div>
+    <ul>
+        <%- game.coach.map(c =>
+        `<li>${c.name} <small>${c.born.toLocaleDateString()}</small></li>`
+        ).join('') %>
+    </ul>
 </section>
 
 <section>
@@ -42,6 +48,14 @@
         <option value="10" selected>10</option>
     </select>
     <input type="submit" value="Add Comment">
+</form>
+<form id="add-coach-to-team" action="/games/<%= game._id %>/coaches" method="POST">
+    <select name="coachId">
+        <%- coaches.map(c =>
+            `<option value="${c._id}">${c.name}</option>`
+        ).join('') %>
+    </select>
+    <button type="submit">Add to Game</button>
 </form>
 </section>
 
