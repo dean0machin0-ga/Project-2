@@ -1,10 +1,10 @@
-Husky Football Tracker
+<HUSKY FOOTBALL TRACKER>
 
 Track all things Husky football with this handy app.
 
-Screenshot
+Screenshots:
 
-![Game Results Page](/home/dean0machin0/sei/projects/Project-2-Husky/public/images/Screenshot 2023-12-04 132246.png)
+![Game Results Page](/public/images/Screenshot 2023-12-04 132246.png)
 
 ![Add Game page](/home/dean0machin0/sei/projects/Project-2-Husky/public/images/Screenshot 2023-12-04 132422.png)
 
