@@ -50,8 +50,9 @@ async function index(req, res) {
 async function show(req, res) {
     try {
         const game = await Game.findById(req.params.id).populate('coach')
+        console.log(game)
         const coaches = await Coach.find({ _id: { $nin: game.coach } }).sort('name')
-        console.log(coaches)
+        // console.log(coaches)
         res.render('games/show', { title: 'Game Results', game, coaches })
     }   catch(err) {
         console.log(err)

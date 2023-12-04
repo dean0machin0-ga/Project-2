@@ -21,7 +21,7 @@
     <div>Coach:</div>
     <ul>
         <%- game.coach.map(c =>
-        `<li>${c.name} <small>${c.born.toLocaleDateString()}</small></li>`
+        `<li>${c.name}</li>`
         ).join('') %>
     </ul>
 </section>
@@ -49,7 +49,7 @@
     </select>
     <input type="submit" value="Add Comment">
 </form>
-<form id="add-coach-to-team" action="/games/<%= game._id %>/coaches" method="POST">
+<form id="add-coach-to-team" action="/coaches/games/<%= game._id %>/coaches" method="POST">
     <select name="coachId">
         <%- coaches.map(c =>
             `<option value="${c._id}">${c.name}</option>`
