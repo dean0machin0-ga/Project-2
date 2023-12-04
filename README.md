@@ -1,5 +1,28 @@
-# Project-2-Interactive-Husky-Football-Tracker
+Husky Football Tracker
 
-# trello Board - https://trello.com/b/wBgloCjT/p2-uw-husky-football-go-dawgies-ruff-ruff
+Track all things Husky football with this handy app.
 
-# ER Diagram - https://lucid.app/lucidchart/a6c66c9d-0163-4f4d-bed5-3b57622b40f2/edit?viewport_loc=-1024%2C-427%2C1792%2C743%2C0_0&invitationId=inv_684b8003-30e7-4c32-9efa-de8ee40fe464
+Screenshot
+
+![Game Results Page](/home/dean0machin0/sei/projects/Project-2-Husky/public/images/Screenshot 2023-12-04 132246.png)
+
+![Add Game page](/home/dean0machin0/sei/projects/Project-2-Husky/public/images/Screenshot 2023-12-04 132422.png)
+
+
+
+
+Technologies Used
+Node.js
+Express.js
+Mongoose
+MongoDB
+JavaScript
+HTML
+CSS
+CardStarter CSS Library
+Getting Started
+[Click to Play Connect Four!](your deployment url here)
+
+Next Steps
+Future enhancements include: 
+Future enhancement two...
