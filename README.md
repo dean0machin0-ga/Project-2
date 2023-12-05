@@ -1,4 +1,4 @@
-# Project 2
+## Project 2
 
 # Title:
 HUSKY FOOTBALL TRACKER
