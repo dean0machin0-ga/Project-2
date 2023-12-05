@@ -21,7 +21,7 @@ HTML |
 CSS |
 
 # Getting Started:
-[](your deployment url here)
+[Click to start tracking!](https://husky-football-tracker-581367b551a5.herokuapp.com/games)
 
 # Next Steps
 Future enhancements include: 
