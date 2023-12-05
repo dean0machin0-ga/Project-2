@@ -1,17 +1,17 @@
-## Project 2
+# Project 2
 
-# Title:
+## Title:
 HUSKY FOOTBALL TRACKER
 
-# Discription:
+## Discription:
 Track all things Husky football with this handy app.
 
-# Screenshots:
+### Screenshots:
 ![Game Results Page](image.png)
 
 ![Add Game Page](image-1.png)
 
-# Technologies Used:
+## Technologies Used:
 Node.js |
 Express.js |
 Mongoose |
@@ -21,7 +21,7 @@ HTML |
 CSS |
 
 # Getting Started:
-[Click to start tracking!](https://husky-football-tracker-581367b551a5.herokuapp.com/games)
+[CLICK HERE TO START TRACKING HUSKY FOOTBALL](https://husky-football-tracker-581367b551a5.herokuapp.com/games)
 
 # Next Steps
 Future enhancements include: 
